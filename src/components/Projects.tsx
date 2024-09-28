@@ -3,14 +3,14 @@ import "./Projects.css"
 export const Projects = () => {
   const projects = [
     {
-      name: "My Website",
+      name: "This Website",
       description: "You're looking at it. Check out out the code!",
       link: "https://moritzhipper.com",
       tags: ["React", "Vite"],
     },
     {
       name: "Buddy",
-      description: "Helps you find a therapist near you",
+      description: "Helps you finding a therapist",
       link: "https://github.com/moritzhipper/",
       tags: ["Angular", "Postgres", "NX", "express.js"],
     },

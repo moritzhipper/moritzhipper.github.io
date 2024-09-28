@@ -7,7 +7,6 @@ footer {
   bottom: var(--distance-m);
 
   a {
-    padding: 0 var(--distance-s);
     border-radius: var(--radius-m);
     background-color: var(--accent-4);
   }

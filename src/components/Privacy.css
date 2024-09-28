@@ -1,8 +1,11 @@
 .privacy-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--distance-s);
   ul {
     list-style: none;
     margin: 0;
-    padding: 0 0 var(--distance-m) 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--distance-s);
@@ -15,13 +18,14 @@
   }
 
   h2 {
-    margin: var(--distance-m) 0 var(--distance-s);
+    margin-top: var(--distance-m);
   }
 
-  p {
-    margin-bottom: var(--distance-s);
-  }
   a {
     margin: 0 var(--distance-s);
+  }
+
+  .address {
+    padding-left: var(--distance-m);
   }
 }

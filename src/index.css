@@ -51,6 +51,7 @@ body {
 h1 {
   font-size: var(--font-size-xxl);
   line-height: 1.2em;
+  word-break: break-all;
 }
 
 h2 {
