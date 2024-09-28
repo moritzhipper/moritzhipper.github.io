@@ -1,0 +1,104 @@
+@import "./layout.css";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  --accent-0: #1f1b19;
+  --accent-1: #524844;
+  --accent-2: #d0b8ac;
+  --accent-3: #f3d8c7;
+  --accent-4: #efe5dc;
+
+  --distance-m: 16px;
+  --distance-s: 8px;
+  --distance-xs: 4px;
+  --distance-xxs: 2px;
+
+  --radius-m: 8px;
+  --radius-l: 16px;
+
+  --font-size-m: 1em;
+  --font-size-l: 1.1em;
+  --font-size-xl: 1.4em;
+  --font-size-xxl: 3.2em;
+
+  --width-max: 1280px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  background-color: var(--accent-4);
+  color: var(--accent-0);
+
+  #root {
+    height: 100dvh;
+    width: var(--width-max);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: var(--distance-m);
+  }
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--accent-1);
+
+  &.big {
+    font-size: var(--font-size-l);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      transition: width 0.2s;
+      height: 2px;
+      background-color: var(--accent-1);
+      border-radius: 2px;
+      content: "";
+      display: block;
+      width: 0px;
+      left: 0;
+    }
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      display: block;
+      content: "";
+    }
+  }
+}
+
+p {
+  font-size: var(--font-size-m);
+  margin: 0;
+  &.big {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}

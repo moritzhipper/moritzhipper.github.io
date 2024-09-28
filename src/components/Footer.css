@@ -1,0 +1,18 @@
+footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--distance-m);
+  position: sticky;
+  margin-top: var(--distance-m);
+  bottom: var(--distance-m);
+
+  a {
+    padding: 0 var(--distance-s);
+    border-radius: var(--radius-m);
+    background-color: var(--accent-4);
+  }
+
+  .back {
+    margin-right: auto;
+  }
+}

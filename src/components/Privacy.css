@@ -1,0 +1,27 @@
+.privacy-wrapper {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 var(--distance-m) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--distance-s);
+    li {
+      list-style: none;
+      padding: 0 var(--distance-s);
+      border-radius: var(--radius-m);
+      background-color: var(--accent-3);
+    }
+  }
+
+  h2 {
+    margin: var(--distance-m) 0 var(--distance-s);
+  }
+
+  p {
+    margin-bottom: var(--distance-s);
+  }
+  a {
+    margin: 0 var(--distance-s);
+  }
+}
