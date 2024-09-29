@@ -26,6 +26,7 @@
   }
 
   .address {
+    font-style: italic;
     padding-left: var(--distance-m);
   }
 }

@@ -8,7 +8,7 @@ footer {
 
   a {
     border-radius: var(--radius-m);
-    background-color: var(--accent-4);
+    text-shadow: 0px 2px 3px var(--accent-4);
   }
 
   .back {

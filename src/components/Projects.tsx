@@ -33,7 +33,14 @@ export const Projects = () => {
   )
 }
 
-const Project = ({ name, description, link, tags }) => {
+type ProjectProps = {
+  name: string
+  description: string
+  link: string
+  tags: string[]
+}
+
+const Project = ({ name, description, link, tags }: ProjectProps) => {
   return (
     <a href="{link}" className="project">
       <h2>{name}</h2>

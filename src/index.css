@@ -1,7 +1,18 @@
 @import "./layout.css";
 
+@font-face {
+  font-family: "HeaderFont";
+  src: url(./assets/fonts/RobotoMono-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BodyFont";
+  src: url(./assets/fonts/Rubik-VariableFont_wght.ttf) format("truetype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "BodyFont";
+
   line-height: 1.5;
   font-weight: 400;
 
@@ -48,6 +59,11 @@ body {
   }
 }
 
+h1,
+h2 {
+  font-family: HeaderFont;
+}
+
 h1 {
   font-size: var(--font-size-xxl);
   line-height: 1.2em;
@@ -92,7 +108,7 @@ p {
   margin: 0;
   &.big {
     font-size: var(--font-size-xl);
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 }
 
