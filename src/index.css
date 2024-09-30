@@ -23,13 +23,14 @@
   --accent-3: #f3d8c7;
   --accent-4: #efe5dc;
 
-  --distance-xl: 64px;
-  --distance-l: 32px;
-  --distance-m: 16px;
-  --distance-s: 8px;
-  --distance-xs: 4px;
   --distance-xxs: 2px;
+  --distance-xs: 4px;
+  --distance-s: 8px;
+  --distance-m: 16px;
+  --distance-l: 32px;
+  --distance-xl: 64px;
 
+  --radius-s: 6px;
   --radius-m: 8px;
   --radius-l: 16px;
 

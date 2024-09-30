@@ -1,15 +1,14 @@
 .project-wrapper {
-  gap: var(--distance-s);
   width: 100%;
 
   a.project {
+    transition: transform 0.2s;
     display: grid;
+    font-weight: normal;
+    position: relative;
     gap: var(--distance-xs);
-    border-radius: var(--radius-l);
-    border: 2px solid var(--accent-2);
     padding: var(--distance-m);
     color: var(--accent-0);
-    transition: background-color 0.2s ease-in-out;
 
     .url {
       font-weight: normal;
@@ -24,11 +23,46 @@
         border-radius: var(--radius-m);
         padding: var(--distance-xxs) var(--distance-s);
         background-color: var(--accent-3);
+        flex-wrap: wrap;
       }
     }
 
     &:hover {
-      background-color: var(--accent-2);
+      &::before,
+      &::after {
+        border-color: var(--accent-1);
+      }
+
+      &::before {
+        width: 64px;
+      }
+      &::after {
+        width: 50%;
+      }
+    }
+
+    &::before,
+    &::after {
+      transition: transform 0.2s, border-color 0.2s, width 0.2s;
+      box-sizing: border-box;
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 16px;
+      border: 0 solid var(--accent-2);
+      height: 50%;
+    }
+
+    &::before {
+      top: 0;
+      border-width: 2px 0 0 2px;
+      border-top-left-radius: var(--radius-s);
+    }
+
+    &::after {
+      border-width: 0 0 2px 2px;
+      border-bottom-left-radius: var(--radius-s);
+      bottom: 0;
     }
   }
 }
