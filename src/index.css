@@ -23,7 +23,7 @@
   --accent-3: #f3d8c7;
   --accent-4: #efe5dc;
 
-  --distance-xxs: 2px;
+  --distance-2xs: 2px;
   --distance-xs: 4px;
   --distance-s: 8px;
   --distance-m: 16px;
@@ -99,10 +99,10 @@ h2 {
 
 a {
   text-decoration: none;
-  font-weight: bold;
   color: var(--accent-1);
 
   &.big {
+    font-weight: 500;
     font-size: var(--font-size-l);
     position: relative;
 

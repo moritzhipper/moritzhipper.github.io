@@ -2,6 +2,7 @@
   width: 100%;
 
   a.project {
+    border-radius: var(--radius-m);
     transition: transform 0.2s;
     display: grid;
     font-weight: normal;
@@ -21,13 +22,14 @@
 
       .tag {
         border-radius: var(--radius-m);
-        padding: var(--distance-xxs) var(--distance-s);
+        padding: var(--distance-2xs) var(--distance-s);
         background-color: var(--accent-3);
         flex-wrap: wrap;
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::before,
       &::after {
         border-color: var(--accent-1);
@@ -46,11 +48,10 @@
       transition: transform 0.2s, border-color 0.2s, width 0.2s;
       box-sizing: border-box;
       content: "";
-      height: 100%;
       position: absolute;
-      width: 16px;
       border: 0 solid var(--accent-2);
       height: 50%;
+      width: 16px;
     }
 
     &::before {

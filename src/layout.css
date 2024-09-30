@@ -56,7 +56,7 @@ main {
     grid-template-columns: 1fr;
   }
   .flex-row {
-    gap: var(--distance-m);
+    gap: var(--distance-l);
     flex-direction: column;
   }
 }

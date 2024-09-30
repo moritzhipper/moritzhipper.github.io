@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import { DidAnimateContext } from "../App"
 
 const textArray: string[] = [
-  "Hi",
-  "My name is Moritz and I love to code!",
+  "Hello there!",
+  "My name is Moritz and I love to code.",
   "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies. I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
   "Read more about me",
   "Check out some of my code",
@@ -31,7 +31,6 @@ export const Welcome = () => {
 
     const timeout = setTimeout(() => {
       setWrittenText(getTextArrayUntilIndex(texts, index))
-      console.log(getTextArrayUntilIndex(texts, index))
       setIndex((prev) => prev + 1)
     }, getRandomIntervall(texts, index))
 
@@ -73,13 +72,8 @@ const getTextArrayUntilIndex = (
 
     const remainingLength = index - currentIndex + 1
 
-    if (index === 0) {
-      result.push("█")
-      break
-    }
-
     if (remainingLength <= text.length) {
-      result.push(text.slice(0, remainingLength - 1) + "█")
+      result.push(text.slice(0, remainingLength - 1))
       break
     } else {
       result.push(text)
@@ -87,6 +81,8 @@ const getTextArrayUntilIndex = (
 
     currentIndex += text.length
   }
+
+  result[result.length - 1] += "█"
 
   return result
 }
@@ -101,7 +97,7 @@ const isFirstLetterOfListItem = (
   let currentIndex = 0
 
   for (const text of textList) {
-    if (currentIndex === index - 1) {
+    if (currentIndex + 1 === index) {
       return true
     }
     currentIndex += text.length
@@ -111,14 +107,25 @@ const isFirstLetterOfListItem = (
 }
 
 const getRandomIntervall = (textList: string[], index: number): number => {
-  if (isFirstLetterOfListItem(textList, index)) {
-    return getRandomNumber(200, 300)
+  if (isFirstListItem(textList, index)) {
+    return getRandomNumber(200, 500)
   }
+  // make it seem like im stopping to think
+  if (isFirstLetterOfListItem(textList, index)) {
+    return getRandomNumber(600, 700)
+  }
+
+  // make it seem like im looking for the key
   if (isLongIntervall()) {
     return getRandomNumber(300, 500)
   }
 
+  // basic random intervalls between key presses
   return getRandomNumber(30, 40)
+}
+
+const isFirstListItem = (textList: string[], index: number): boolean => {
+  return textList[0].length >= index
 }
 
 const getRandomNumber = (min: number, max: number): number =>

@@ -18,7 +18,7 @@ export const Projects = () => {
       name: "Keinerdeinerfreunde",
       description: "Makes people feel heard",
       link: "https://keinerdeinerfreunde.de",
-      tags: ["React", "three.js"],
+      tags: ["React", "three.js", "fiber"],
     },
   ]
   return (
