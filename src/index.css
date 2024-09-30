@@ -13,11 +13,9 @@
 :root {
   font-family: "BodyFont";
 
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 1.3;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
 
   --accent-0: #1f1b19;
   --accent-1: #524844;
@@ -25,6 +23,8 @@
   --accent-3: #f3d8c7;
   --accent-4: #efe5dc;
 
+  --distance-xl: 64px;
+  --distance-l: 32px;
   --distance-m: 16px;
   --distance-s: 8px;
   --distance-xs: 4px;
@@ -36,15 +36,23 @@
   --font-size-m: 1em;
   --font-size-l: 1.1em;
   --font-size-xl: 1.4em;
-  --font-size-xxl: 3.2em;
+  --font-size-2xl: 2.4em;
+  --font-size-3xl: 3.2em;
 
   --width-max: 1280px;
+}
+
+body,
+h2,
+h3,
+p,
+a {
+  margin: 0;
 }
 
 body {
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
   max-width: 100%;
   background-color: var(--accent-4);
   color: var(--accent-0);
@@ -55,8 +63,16 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: var(--distance-m);
   }
+
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(./assets/images/firstOutline.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1,
@@ -65,9 +81,15 @@ h2 {
 }
 
 h1 {
-  font-size: var(--font-size-xxl);
-  line-height: 1.2em;
+  font-size: var(--font-size-2xl);
+
+  line-height: 1.3em;
   word-break: break-all;
+  margin: var(--distance-m) 0;
+
+  &.big {
+    font-size: var(--font-size-3xl);
+  }
 }
 
 h2 {
@@ -105,17 +127,8 @@ a {
 
 p {
   font-size: var(--font-size-m);
-  margin: 0;
   &.big {
     font-size: var(--font-size-xl);
     /* font-weight: bold; */
   }
-}
-
-body,
-h1,
-h2,
-h3,
-p {
-  margin: 0;
 }

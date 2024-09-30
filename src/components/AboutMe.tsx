@@ -9,12 +9,12 @@ export const AboutMe = () => {
         knowledge with students and colleagues. I enjoy bringing my creativity
         into my work.
       </p>
-      <p className="big">
+      <p className="big mt-s">
         When I'm not doing that, I'm probably in the nature somewhere looking at
         birds.
       </p>
       <a
-        className="big"
+        className="big mt-l"
         href="https://www.linkedin.com/in/moritz-hipper-226226323/"
       >
         Contact me via Linkedin

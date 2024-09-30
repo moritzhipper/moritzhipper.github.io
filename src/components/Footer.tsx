@@ -5,7 +5,7 @@ export const Footer = () => {
   const { pathname } = useLocation()
 
   return (
-    <footer>
+    <footer className="mt-l">
       {pathname !== "/" && (
         <Link className="back" to="/">
           back

@@ -3,10 +3,9 @@ import { Link } from "react-router-dom"
 import { DidAnimateContext } from "../App"
 
 const textArray: string[] = [
-  "Hi there.",
+  "Hi",
   "My name is Moritz and I love to code!",
-  "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies.",
-  "I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
+  "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies. I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
   "Read more about me",
   "Check out some of my code",
 ]
@@ -43,19 +42,17 @@ export const Welcome = () => {
 
   return (
     <>
-      {writtenText[0] && <h1>{writtenText[0]}</h1>}
+      {writtenText[0] && <h1 className="big">{writtenText[0]}</h1>}
       {writtenText[1] && <p className="big">{writtenText[1]}</p>}
-      {writtenText[2] && <p className="big">{writtenText[2]}</p>}
-      {writtenText[3] && <p className="big was">{writtenText[3]}</p>}
-
-      {writtenText[4] && (
-        <div className="flex-row">
+      {writtenText[2] && <p className="big mt-m">{writtenText[2]}</p>}
+      {writtenText[3] && (
+        <div className="flex-row mt-l">
           <Link className="big" to="/interests">
-            {writtenText[4]}
+            {writtenText[3]}
           </Link>
-          {writtenText[5] && (
+          {writtenText[4] && (
             <Link className="big" to="/projects">
-              {writtenText[5]}
+              {writtenText[4]}
             </Link>
           )}
         </div>
@@ -121,7 +118,7 @@ const getRandomIntervall = (textList: string[], index: number): number => {
     return getRandomNumber(300, 500)
   }
 
-  return getRandomNumber(30, 60)
+  return getRandomNumber(30, 40)
 }
 
 const getRandomNumber = (min: number, max: number): number =>

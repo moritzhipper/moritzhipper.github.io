@@ -8,7 +8,7 @@ export const Imprint = () => {
         <p>70197, Stuttgart</p>
         <p>Germany</p>
       </div>
-      <div>
+      <div className="mt-s">
         <h2>Kontakt</h2>
         <p>E-Mail: info@moritzhipper.com</p>
       </div>
