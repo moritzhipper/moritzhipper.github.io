@@ -1,3 +1,13 @@
+@custom-media --small-viewport (min-width: 200px);
+
+@media (--small-viewport) {
+  p,
+  body,
+  div {
+    background-color: black;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
