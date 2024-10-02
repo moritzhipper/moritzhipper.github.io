@@ -2,7 +2,7 @@ import "./Privacy.css"
 export const Privacy = () => {
   return (
     <>
-      <h1>Datenschutzerklärung</h1>
+      <h1>Datenschutz&#8203;erklärung</h1>
       <div className="privacy-wrapper">
         <p>
           Der Hoster dieser Website erhebt in sogenannten Logfiles die folgenden

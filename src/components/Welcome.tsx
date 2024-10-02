@@ -87,6 +87,7 @@ const getTextArrayUntilIndex = (
   return result
 }
 
+// Emulate user pauses
 const isLongIntervall = (): boolean => {
   return getRandomNumber(0, 100) > 99
 }
@@ -106,9 +107,16 @@ const isFirstLetterOfListItem = (
   return false
 }
 
+const isFirstListItem = (textList: string[], index: number): boolean => {
+  return textList[0].length >= index
+}
+
+const getRandomNumber = (min: number, max: number): number =>
+  Math.floor(Math.random() * (max - min + 1)) + min
+
 const getRandomIntervall = (textList: string[], index: number): number => {
   if (isFirstListItem(textList, index)) {
-    return getRandomNumber(200, 500)
+    return getRandomNumber(100, 500)
   }
   // make it seem like im stopping to think
   if (isFirstLetterOfListItem(textList, index)) {
@@ -123,10 +131,3 @@ const getRandomIntervall = (textList: string[], index: number): number => {
   // basic random intervalls between key presses
   return getRandomNumber(30, 40)
 }
-
-const isFirstListItem = (textList: string[], index: number): boolean => {
-  return textList[0].length >= index
-}
-
-const getRandomNumber = (min: number, max: number): number =>
-  Math.floor(Math.random() * (max - min + 1)) + min
