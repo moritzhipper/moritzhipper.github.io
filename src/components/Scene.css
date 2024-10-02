@@ -1,0 +1,18 @@
+img.scene {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+
+  &.lamp {
+    height: 50vh;
+    top: -10vh;
+    right: -5vh;
+  }
+
+  &.plant {
+    height: 70vh;
+    left: -35vh;
+    bottom: -20vh;
+  }
+}

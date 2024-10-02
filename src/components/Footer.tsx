@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className="mt-l">
       {pathname !== "/" && (
         <Link className="back big" to="/">
-          {"<"} back
+          back to start
         </Link>
       )}
       <Link to="/imprint">Imprint</Link>

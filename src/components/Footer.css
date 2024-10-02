@@ -5,10 +5,6 @@ footer {
   position: sticky;
   bottom: var(--distance-m);
 
-  a {
-    border-radius: var(--radius-m);
-  }
-
   .back {
     margin-right: auto;
   }

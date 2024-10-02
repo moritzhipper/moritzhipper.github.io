@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer"
 import { Imprint } from "./components/Imprint"
 import { Privacy } from "./components/Privacy"
 import { Projects } from "./components/Projects"
+import { Scene } from "./components/Scene"
 import { Welcome } from "./components/Welcome"
 
 type DidAnimateContextType = {
@@ -38,6 +39,7 @@ function App() {
           <Route element={<Imprint />} path="/imprint" />
           <Route element={<Privacy />} path="/privacy" />
         </Routes>
+        <Scene />
       </main>
       <Footer />
     </>
