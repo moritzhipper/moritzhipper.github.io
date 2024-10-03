@@ -1,4 +1,5 @@
-@import "./layout.css";
+@import "./style/layout";
+@import "./style/variables";
 
 @font-face {
   font-family: "HeaderFont";
@@ -12,35 +13,8 @@
 
 :root {
   font-family: "BodyFont";
-
   line-height: 1.3;
-
   color-scheme: light dark;
-
-  --accent-0: #1f1b19;
-  --accent-1: #524844;
-  --accent-2: #d0b8ac;
-  --accent-3: #f3d8c7;
-  --accent-4: #efe5dc;
-
-  --distance-2xs: 2px;
-  --distance-xs: 4px;
-  --distance-s: 8px;
-  --distance-m: 16px;
-  --distance-l: 32px;
-  --distance-xl: 64px;
-
-  --radius-s: 6px;
-  --radius-m: 8px;
-  --radius-l: 16px;
-
-  --font-size-m: 1em;
-  --font-size-l: 1.1em;
-  --font-size-xl: 1.4em;
-  --font-size-2xl: 2.4em;
-  --font-size-3xl: 3.2em;
-
-  --width-max: 1280px;
 }
 
 body,

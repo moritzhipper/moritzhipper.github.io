@@ -4,9 +4,11 @@ import "./Scene.css"
 
 export const Scene = () => {
   return (
-    <>
-      <img className="scene lamp" src={lamp} alt="" />
-      <img className="scene plant" src={plant} alt="" />
-    </>
+    <div className="scene-wrapper">
+      <div className="center">
+        <img className="scene lamp" src={lamp} alt="" />
+        <img className="scene plant" src={plant} alt="" />
+      </div>
+    </div>
   )
 }

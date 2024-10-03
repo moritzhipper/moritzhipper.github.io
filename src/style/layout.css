@@ -1,25 +1,6 @@
-@custom-media --small-viewport (min-width: 200px);
+@import "viewports";
 
-@media (--small-viewport) {
-  p,
-  body,
-  div {
-    background-color: black;
-  }
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1;
-}
-
-.grid {
-  display: grid;
-  gap: var(--distance-m);
-}
-
+/* unresponsive layout */
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -41,7 +22,20 @@ main {
   margin-top: var(--distance-xs);
 }
 
-@media screen and (min-width: 801px) {
+/* responsive layout */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  gap: var(--distance-m);
+}
+
+@media (--viewport-m) {
   #root {
     padding: 0 var(--distance-xl);
   }
@@ -58,7 +52,7 @@ main {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media (--viewport-s) {
   #root {
     padding: 0 var(--distance-m);
   }

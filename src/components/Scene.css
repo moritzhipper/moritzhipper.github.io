@@ -1,18 +1,37 @@
-img.scene {
+.scene-wrapper {
+  position: fixed;
+  height: 100dvh;
+  width: 100dvw;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   pointer-events: none;
-  position: absolute;
-  bottom: 0;
-  object-fit: contain;
+  z-index: -1;
 
-  &.lamp {
-    height: 50vh;
-    top: -10vh;
-    right: -5vh;
+  .center {
+    width: var(--width-max);
+    position: relative;
   }
 
-  &.plant {
-    height: 70vh;
-    left: -35vh;
-    bottom: -20vh;
+  img.scene {
+    filter: blur(1px);
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
+
+    &.lamp {
+      height: 50vh;
+      top: -10vh;
+      right: -5vh;
+    }
+
+    &.plant {
+      height: 70vh;
+      left: -35vh;
+      bottom: -20vh;
+    }
   }
 }

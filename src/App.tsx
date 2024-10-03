@@ -1,6 +1,5 @@
 import { createContext, useState } from "react"
 import { Route, Routes } from "react-router-dom"
-import "./App.css"
 import { AboutMe } from "./components/AboutMe"
 import { Footer } from "./components/Footer"
 import { Imprint } from "./components/Imprint"
