@@ -1,3 +1,12 @@
+.scene-wrapper,
+.center {
+  perspective: 100px;
+}
+
+.flyIn3d {
+  animation: flyIn3d 2s ease-out;
+}
+
 .scene-wrapper {
   position: fixed;
   height: 100dvh;
@@ -10,28 +19,41 @@
   pointer-events: none;
   z-index: -1;
 
+  img {
+    pointer-events: none;
+    position: absolute;
+    object-fit: contain;
+  }
+
+  img.room {
+    height: 100vh;
+  }
+
   .center {
     width: var(--width-max);
     position: relative;
-  }
 
-  img.scene {
-    filter: blur(1px);
-    pointer-events: none;
-    position: absolute;
-    bottom: 0;
-    object-fit: contain;
-
-    &.lamp {
+    img.lamp {
       height: 50vh;
       top: -10vh;
       right: -5vh;
     }
 
-    &.plant {
+    img.plant {
       height: 70vh;
       left: -35vh;
       bottom: -20vh;
     }
+  }
+}
+
+@keyframes flyIn3d {
+  from {
+    opacity: 0;
+    transform: perspective(100px) translateZ(20px);
+  }
+
+  to {
+    opacity: 1;
   }
 }

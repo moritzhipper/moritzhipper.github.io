@@ -39,15 +39,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url(./assets/images/firstOutline.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 h1,
