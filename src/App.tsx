@@ -38,9 +38,9 @@ function App() {
           <Route element={<Imprint />} path="/imprint" />
           <Route element={<Privacy />} path="/privacy" />
         </Routes>
-        <Scene />
       </main>
       <Footer />
+      <Scene />
     </>
   )
 }
