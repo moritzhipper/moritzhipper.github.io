@@ -29,7 +29,8 @@ body {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  background-color: var(--accent-4);
+  /* background-color: var(--accent-4); */
+  background-color: white;
   color: var(--accent-0);
 
   #root {

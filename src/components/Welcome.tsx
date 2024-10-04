@@ -1,6 +1,6 @@
-import { useContext, useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { DidAnimateContext } from "../App"
+import { initiatorState } from "../initiator-state"
 
 const textArray: string[] = [
   "Hello there!",
@@ -13,19 +13,25 @@ const textArray: string[] = [
 export const Welcome = () => {
   const [writtenText, setWrittenText] = useState<string[]>([])
   const [index, setIndex] = useState(0)
-  const { didAnimate, setDidAnimate } = useContext(DidAnimateContext)
+  const {
+    didAnimateTypewriter: didAnimate,
+    didAnimateSceneEnterin: didLoadAssets,
+    updateIniatorState,
+  } = initiatorState()
 
   const texts = useMemo(() => textArray, [])
   const textLength = useMemo(() => texts.join("").length, [])
 
   useEffect(() => {
+    if (!didLoadAssets) return
+
     if (didAnimate) {
       setWrittenText(texts)
       return
     }
 
     if (index === textLength) {
-      setDidAnimate(true)
+      updateIniatorState({ didAnimateTypewriter: true })
       return
     }
 
@@ -37,7 +43,7 @@ export const Welcome = () => {
     return () => {
       clearTimeout(timeout)
     }
-  }, [index, didAnimate, writtenText])
+  }, [index, didAnimate, writtenText, didLoadAssets])
 
   return (
     <>
