@@ -10,6 +10,7 @@
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
+  opacity: 0.3;
 
   img {
     pointer-events: none;
@@ -35,8 +36,8 @@
 
     img.plant {
       aspect-ratio: 1;
-      height: 50vh;
-      left: -15vh;
+      height: 70vh;
+      left: -30vh;
       bottom: -5vh;
     }
   }

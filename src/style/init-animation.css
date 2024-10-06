@@ -22,16 +22,15 @@
   .foreground,
   .middleground,
   .background {
+    opacity: 1;
     transform: scale(1);
   }
 
   .background {
-    opacity: 0.3;
+    filter: sa;
   }
   .middleground {
-    opacity: 0.3;
   }
   .foreground {
-    opacity: 1;
   }
 }

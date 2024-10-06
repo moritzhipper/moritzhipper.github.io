@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import room from "../assets/images/firstOutline.webp"
+import background from "../assets/images/background.png"
 import lamp from "../assets/images/lamp.png"
 import plant from "../assets/images/plant.png"
 import { initiatorState } from "../initiator-state"
@@ -31,7 +31,7 @@ export const Scene = () => {
       <img
         onLoad={finishedLoading}
         className={"background"}
-        src={room}
+        src={background}
         alt=""
       />
       <div className={"middleground"}>
