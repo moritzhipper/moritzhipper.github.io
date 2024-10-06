@@ -1,5 +1,6 @@
 @import "./style/layout";
 @import "./style/variables";
+@import "./style/init-animation";
 
 @font-face {
   font-family: "HeaderFont";
@@ -29,8 +30,7 @@ body {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  /* background-color: var(--accent-4); */
-  background-color: white;
+  background-color: var(--accent-4);
   color: var(--accent-0);
 
   #root {

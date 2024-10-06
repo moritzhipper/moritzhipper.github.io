@@ -10,7 +10,7 @@ import { Welcome } from "./components/Welcome"
 function App() {
   return (
     <>
-      <main>
+      <main className="foreground">
         <Routes>
           <Route element={<Welcome />} path="/" />
           <Route element={<Projects />} path="/projects" />
@@ -19,8 +19,8 @@ function App() {
           <Route element={<Privacy />} path="/privacy" />
         </Routes>
       </main>
-      <Footer />
       <Scene />
+      <Footer />
     </>
   )
 }

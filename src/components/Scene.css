@@ -1,13 +1,4 @@
-.scene-wrapper,
-.center {
-  perspective: 100px;
-}
-
-.flyIn3d {
-  animation: flyIn3d 2s;
-  animation-fill-mode: both;
-}
-
+/* general css */
 .scene-wrapper {
   position: fixed;
   height: 100dvh;
@@ -21,43 +12,32 @@
   z-index: -1;
 
   img {
-    opacity: 0;
     pointer-events: none;
     position: absolute;
     object-fit: contain;
+    object-position: center;
   }
 
-  img.room {
+  img.background {
     height: 100vh;
   }
 
-  .center {
+  .middleground {
     width: var(--width-max);
     position: relative;
 
     img.lamp {
-      height: 50vh;
+      aspect-ratio: 1;
+      height: 40vh;
       top: -10vh;
-      right: -5vh;
-      animation-delay: 1s;
+      right: -15vh;
     }
 
     img.plant {
-      height: 70vh;
-      left: -35vh;
-      bottom: -20vh;
-      animation-delay: 1s;
+      aspect-ratio: 1;
+      height: 50vh;
+      left: -15vh;
+      bottom: -5vh;
     }
-  }
-}
-
-@keyframes flyIn3d {
-  from {
-    opacity: 0;
-    transform: perspective(100px) translateZ(20px);
-  }
-
-  to {
-    opacity: 1;
   }
 }

@@ -1,0 +1,37 @@
+.foreground,
+.middleground,
+.background {
+  transition-properties: transform, opacity;
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+.foreground {
+  transform: scale(1.3);
+}
+
+.middleground {
+  transform: scale(1.2);
+}
+
+.background {
+  transform: scale(1.1);
+}
+
+.loaded {
+  .foreground,
+  .middleground,
+  .background {
+    transform: scale(1);
+  }
+
+  .background {
+    opacity: 0.3;
+  }
+  .middleground {
+    opacity: 0.3;
+  }
+  .foreground {
+    opacity: 1;
+  }
+}

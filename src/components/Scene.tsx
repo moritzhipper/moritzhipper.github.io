@@ -7,25 +7,18 @@ import "./Scene.css"
 
 export const Scene = () => {
   const [loadedImagesCount, setLoadedImagesCount] = useState(0)
-  const [animate, setAnimate] = useState("")
-  const { updateIniatorState } = initiatorState()
+  const { setImagesLoadingFinished } = initiatorState()
 
   useEffect(() => {
     if (loadedImagesCount !== 3) return
 
     // short timeout to wait or image to be rendered, so it doesnt just 'pop in'
-    const animationStartTimeout = setTimeout(() => {
-      setAnimate("flyIn3d")
-    }, 200)
-
-    // wait for flyinanimation to be finished
-    const animationEndTimeout = setTimeout(() => {
-      updateIniatorState({ didAnimateSceneEnterin: true })
-    }, 2300)
+    const imagesLoadedTimeout = setTimeout(() => {
+      setImagesLoadingFinished()
+    }, 400)
 
     return () => {
-      clearTimeout(animationEndTimeout)
-      clearTimeout(animationStartTimeout)
+      clearTimeout(imagesLoadedTimeout)
     }
   }, [loadedImagesCount])
 
@@ -37,23 +30,13 @@ export const Scene = () => {
     <div className="scene-wrapper">
       <img
         onLoad={finishedLoading}
-        className={"room " + animate}
+        className={"background"}
         src={room}
         alt=""
       />
-      <div className="center">
-        <img
-          onLoad={finishedLoading}
-          className={"lamp " + animate}
-          src={lamp}
-          alt=""
-        />
-        <img
-          onLoad={finishedLoading}
-          className={"plant " + animate}
-          src={plant}
-          alt=""
-        />
+      <div className={"middleground"}>
+        <img onLoad={finishedLoading} className="lamp" src={lamp} alt="" />
+        <img onLoad={finishedLoading} className=" plant" src={plant} alt="" />
       </div>
     </div>
   )

@@ -14,24 +14,24 @@ export const Welcome = () => {
   const [writtenText, setWrittenText] = useState<string[]>([])
   const [index, setIndex] = useState(0)
   const {
-    didAnimateTypewriter: didAnimate,
-    didAnimateSceneEnterin: didLoadAssets,
-    updateIniatorState,
+    typewriterAnimationFinished,
+    imagesLoadingFinished,
+    setTypewriterAnimationFinished,
   } = initiatorState()
 
   const texts = useMemo(() => textArray, [])
   const textLength = useMemo(() => texts.join("").length, [])
 
   useEffect(() => {
-    if (!didLoadAssets) return
+    if (!imagesLoadingFinished) return
 
-    if (didAnimate) {
+    if (typewriterAnimationFinished) {
       setWrittenText(texts)
       return
     }
 
     if (index === textLength) {
-      updateIniatorState({ didAnimateTypewriter: true })
+      setTypewriterAnimationFinished()
       return
     }
 
@@ -43,7 +43,7 @@ export const Welcome = () => {
     return () => {
       clearTimeout(timeout)
     }
-  }, [index, didAnimate, writtenText, didLoadAssets])
+  }, [index, typewriterAnimationFinished, writtenText, imagesLoadingFinished])
 
   return (
     <>

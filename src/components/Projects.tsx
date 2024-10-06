@@ -23,7 +23,7 @@ export const Projects = () => {
   ]
   return (
     <>
-      <h1>My Projects</h1>
+      <h1>Some Projects</h1>
       <div className="project-wrapper grid">
         {projects.map((project, i) => (
           <Project key={i} {...project} />

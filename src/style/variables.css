@@ -1,9 +1,13 @@
 :root {
+  /* eee5ce */
+
   --accent-0: #1f1b19;
   --accent-1: #524844;
   --accent-2: #d0b8ac;
   --accent-3: #f3d8c7;
-  --accent-4: #efe5dc;
+
+  /* taken from background picture */
+  --accent-4: #eee5ce;
 
   --distance-2xs: 2px;
   --distance-xs: 4px;

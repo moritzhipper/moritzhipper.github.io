@@ -1,15 +1,24 @@
 import { create } from "zustand"
 
-const animationsEnabled = false
+const animationsDisabled = false
 
 type InitiatorState = {
-  didAnimateSceneEnterin: boolean
-  didAnimateTypewriter: boolean
+  imagesLoadingFinished: boolean
+  typewriterAnimationFinished: boolean
+  setImagesLoadingFinished: () => void
+  setTypewriterAnimationFinished: () => void
   updateIniatorState: (newState: Partial<InitiatorState>) => void
 }
 
 export const initiatorState = create<InitiatorState>((set) => ({
-  didAnimateSceneEnterin: animationsEnabled,
-  didAnimateTypewriter: animationsEnabled,
+  imagesLoadingFinished: animationsDisabled,
+  typewriterAnimationFinished: animationsDisabled,
+  setImagesLoadingFinished: () =>
+    set((state) => {
+      document.body.classList.add("loaded")
+      return { ...state, imagesLoadingFinished: true }
+    }),
+  setTypewriterAnimationFinished: () =>
+    set((state) => ({ ...state, typewriterAnimationFinished: true })),
   updateIniatorState: (newState) => set((state) => ({ ...state, ...newState })),
 }))
