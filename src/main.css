@@ -27,18 +27,20 @@ a {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
   background-color: var(--accent-4);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: var(--accent-0);
 
-  #root {
-    height: 100dvh;
+  main {
     width: var(--width-max);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+  }
+
+  footer {
+    margin-left: auto;
   }
 }
 
