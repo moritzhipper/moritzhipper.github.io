@@ -10,12 +10,6 @@
     gap: var(--distance-xs);
     padding: var(--distance-m);
     color: var(--accent-0);
-    /* backdrop-filter: blur(10px); */
-    /* box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.4); */
-
-    .url {
-      font-weight: normal;
-    }
 
     .tag-wrapper {
       display: flex;
@@ -25,7 +19,7 @@
       .tag {
         border-radius: var(--radius-m);
         padding: var(--distance-2xs) var(--distance-s);
-        background-color: var(--accent-3);
+        background-color: var(--accent-2);
         flex-wrap: wrap;
       }
     }

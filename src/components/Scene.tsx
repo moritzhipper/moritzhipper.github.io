@@ -9,15 +9,11 @@ import "./Scene.css"
 export const Scene = () => {
   const [loadedImagesCount, setLoadedImagesCount] = useState(0)
   const { setImagesLoadingFinished } = initiatorState()
-
   const acceleration = useMousePosition()
-  // const acceleration = useAcceleration()
-  console.log("acceleration", acceleration)
 
   const displacementBackground = {
     transform: `translate(${acceleration.x * 40}px, ${acceleration.y * 8}px)`,
   }
-
   const displacementMiddle = {
     transform: `translate(${acceleration.x * 30}px, ${acceleration.y * 6}px)`,
   }
@@ -28,7 +24,7 @@ export const Scene = () => {
     // short timeout to wait for image to be rendered, so it doesnt just 'pop in'
     const imagesLoadedTimeout = setTimeout(() => {
       setImagesLoadingFinished()
-    }, 700)
+    }, 400)
 
     return () => {
       clearTimeout(imagesLoadedTimeout)

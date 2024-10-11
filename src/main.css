@@ -27,7 +27,7 @@ a {
 }
 
 body {
-  background-color: var(--accent-4);
+  background-color: var(--accent-3);
   height: 100dvh;
   display: flex;
   flex-direction: column;

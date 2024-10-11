@@ -4,7 +4,7 @@ footer {
   gap: var(--distance-m);
   position: sticky;
   bottom: 0;
-  padding: var(--distance-m);
+  padding: var(--distance-m) var(--distance-s);
 
   .back {
     margin-right: auto;

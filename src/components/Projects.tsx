@@ -1,3 +1,4 @@
+import { InfoPage } from "./InfoPage"
 import "./Projects.css"
 
 export const Projects = () => {
@@ -23,12 +24,13 @@ export const Projects = () => {
   ]
   return (
     <>
-      <h1>Some Projects</h1>
-      <div className="project-wrapper grid">
-        {projects.map((project, i) => (
-          <Project key={i} {...project} />
-        ))}
-      </div>
+      <InfoPage header="Some Projects">
+        <div className="project-wrapper grid">
+          {projects.map((project, i) => (
+            <Project key={i} {...project} />
+          ))}
+        </div>
+      </InfoPage>
     </>
   )
 }
