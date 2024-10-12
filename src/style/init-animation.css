@@ -22,6 +22,6 @@
   .middleground,
   .background {
     transition-property: opacity, transform;
-    transition-behavior: allow-discrete;
+    /* transition-behavior: allow-discrete; */
   }
 }

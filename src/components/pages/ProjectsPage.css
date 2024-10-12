@@ -19,8 +19,7 @@
       .tag {
         border-radius: var(--radius-m);
         padding: var(--distance-2xs) var(--distance-s);
-        background-color: var(--accent-2);
-        flex-wrap: wrap;
+        background-color: var(--accent-3);
       }
     }
 
