@@ -1,0 +1,25 @@
+@import "viewports";
+
+.foreground,
+.middleground,
+.background {
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.loaded {
+  .foreground,
+  .middleground,
+  .background {
+    opacity: 1;
+  }
+}
+
+@media (--viewport-s) {
+  .foreground,
+  .middleground,
+  .background {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}

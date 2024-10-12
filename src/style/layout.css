@@ -1,0 +1,64 @@
+@import "viewports";
+
+/* unresponsive layout */
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mt-l {
+  margin-top: var(--distance-l);
+}
+
+.mt-m {
+  margin-top: var(--distance-m);
+}
+
+.mt-s {
+  margin-top: var(--distance-s);
+}
+
+.mt-xs {
+  margin-top: var(--distance-xs);
+}
+
+/* responsive layout */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  gap: var(--distance-m);
+}
+
+@media (--viewport-m) {
+  main {
+    padding: var(--distance-xl);
+    justify-content: center;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .flex-row {
+    gap: var(--distance-l);
+    flex-direction: row;
+  }
+}
+
+@media (--viewport-s) {
+  main {
+    padding: 0 var(--distance-m);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .flex-row {
+    gap: var(--distance-l);
+    flex-direction: column;
+  }
+}

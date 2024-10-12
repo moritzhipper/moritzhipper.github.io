@@ -3,13 +3,6 @@ footer {
   justify-content: flex-end;
   gap: var(--distance-m);
   position: sticky;
-  bottom: var(--distance-m);
-
-  a {
-    border-radius: var(--radius-m);
-  }
-
-  .back {
-    margin-right: auto;
-  }
+  bottom: 0;
+  padding: var(--distance-m);
 }

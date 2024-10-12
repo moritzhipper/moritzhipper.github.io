@@ -1,0 +1,16 @@
+@import "./../viewports";
+
+.links-wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  @media (--viewport-m) {
+    gap: var(--distance-l);
+    flex-direction: row;
+  }
+
+  @media (--viewport-s) {
+    gap: var(--distance-l);
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,31 @@
+.privacy-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--distance-s);
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--distance-s);
+    li {
+      list-style: none;
+      padding: var(--distance-2xs) var(--distance-s);
+      border-radius: var(--radius-m);
+      background-color: var(--accent-2);
+    }
+  }
+
+  h2 {
+    margin-top: var(--distance-m);
+  }
+
+  a {
+    margin: 0 var(--distance-s);
+  }
+
+  .address {
+    font-style: italic;
+    padding-left: var(--distance-m);
+  }
+}

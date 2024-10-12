@@ -1,44 +1,25 @@
-import { createContext, useState } from "react"
 import { Route, Routes } from "react-router-dom"
-import "./App.css"
-import { AboutMe } from "./components/AboutMe"
 import { Footer } from "./components/Footer"
-import { Imprint } from "./components/Imprint"
-import { Privacy } from "./components/Privacy"
-import { Projects } from "./components/Projects"
-import { Welcome } from "./components/Welcome"
-
-type DidAnimateContextType = {
-  didAnimate: boolean
-  setDidAnimate: (arg: boolean) => void
-}
-
-export const DidAnimateContext = createContext<DidAnimateContextType>({
-  didAnimate: false,
-  setDidAnimate: () => {},
-})
+import { AboutMePage } from "./components/pages/AboutMePage"
+import { ImprintPage } from "./components/pages/ImprintPage"
+import { PrivacyPage } from "./components/pages/PrivacyPage"
+import { ProjectsPage } from "./components/pages/ProjectsPage"
+import { Welcome } from "./components/pages/WelcomePage"
+import { Scene } from "./components/Scene"
 
 function App() {
-  const [didAnimate, setDidAnimate] = useState(false)
-
   return (
     <>
-      <main>
+      <main className="foreground">
         <Routes>
-          <Route
-            element={
-              <DidAnimateContext.Provider value={{ didAnimate, setDidAnimate }}>
-                <Welcome />
-              </DidAnimateContext.Provider>
-            }
-            path="/"
-          />
-          <Route element={<Projects />} path="/projects" />
-          <Route element={<AboutMe />} path="/interests" />
-          <Route element={<Imprint />} path="/imprint" />
-          <Route element={<Privacy />} path="/privacy" />
+          <Route element={<Welcome />} path="/" />
+          <Route element={<ProjectsPage />} path="/projects" />
+          <Route element={<AboutMePage />} path="/interests" />
+          <Route element={<ImprintPage />} path="/imprint" />
+          <Route element={<PrivacyPage />} path="/privacy" />
         </Routes>
       </main>
+      <Scene />
       <Footer />
     </>
   )
