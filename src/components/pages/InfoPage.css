@@ -1,0 +1,45 @@
+@import "./../../style/viewports";
+
+.info-page-wrapper {
+  transition: transform var(--animation-duration-m);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+
+  .header {
+    margin: var(--distance-m) 0;
+    position: relative;
+
+    h1 {
+      margin: 0;
+    }
+
+    a {
+      font-size: var(--font-size-xs);
+      transition: opacity var(--animation-duration-m);
+      font-size: var(--font-size-xl);
+      font-weight: bold;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media (--viewport-m) {
+      a {
+        position: absolute;
+        top: -32px;
+        left: -32px;
+      }
+    }
+    @media (--viewport-s) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr auto;
+      a {
+        align-self: grid-start;
+      }
+    }
+  }
+}

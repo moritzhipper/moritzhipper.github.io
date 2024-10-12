@@ -28,6 +28,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -36,11 +37,8 @@ main {
 }
 
 @media (--viewport-m) {
-  #root {
-    padding: 0 var(--distance-xl);
-  }
-
   main {
+    padding: var(--distance-xl);
     justify-content: center;
   }
   .grid {
@@ -53,7 +51,7 @@ main {
 }
 
 @media (--viewport-s) {
-  #root {
+  main {
     padding: 0 var(--distance-m);
   }
   .grid {

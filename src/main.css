@@ -64,11 +64,21 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+  font-weight: 500;
   color: var(--accent-1);
+  text-decoration: none;
+
+  &.page {
+    opacity: 0.6;
+    transition: opacity var(--animation-duration-m);
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
 
   &.big {
-    font-weight: 500;
     font-size: var(--font-size-l);
     position: relative;
 
@@ -94,8 +104,23 @@ a {
 
 p {
   font-size: var(--font-size-m);
+  line-height: 1.3em;
 
   &.big {
     font-size: var(--font-size-xl);
+  }
+}
+
+.animate-fly-in {
+  animation: fadeIn var(--animation-duration-m) ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
   }
 }

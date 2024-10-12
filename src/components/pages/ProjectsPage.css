@@ -45,7 +45,7 @@
       box-sizing: border-box;
       content: "";
       position: absolute;
-      border: 0 solid var(--accent-1);
+      border: 0 solid var(--accent-2);
       height: 50%;
       width: 16px;
     }
@@ -61,11 +61,5 @@
       border-bottom-left-radius: var(--radius-s);
       bottom: 0;
     }
-  }
-}
-
-@media screen and (min-width: var(--width-m)) {
-  a.project {
-    grid-template-columns: 2fr;
   }
 }

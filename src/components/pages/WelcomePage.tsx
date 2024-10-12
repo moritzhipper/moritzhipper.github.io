@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { initiatorState } from "../initiator-state"
+import { initiatorState } from "../../initiator-state"
 
 const textArray: string[] = [
   "Hello there!",
@@ -46,7 +46,7 @@ export const Welcome = () => {
   }, [index, typewriterAnimationFinished, writtenText, imagesLoadingFinished])
 
   return (
-    <>
+    <div className="animate-fly-in">
       {writtenText[0] && <h1 className="big">{writtenText[0]}</h1>}
       {writtenText[1] && <p className="big">{writtenText[1]}</p>}
       {writtenText[2] && <p className="big mt-m">{writtenText[2]}</p>}
@@ -62,7 +62,7 @@ export const Welcome = () => {
           )}
         </div>
       )}
-    </>
+    </div>
   )
 }
 

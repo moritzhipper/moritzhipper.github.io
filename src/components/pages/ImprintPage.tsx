@@ -1,7 +1,8 @@
-export const Imprint = () => {
+import { InfoPage } from "./InfoPage"
+
+export const ImprintPage = () => {
   return (
-    <>
-      <h1>Imprint</h1>
+    <InfoPage header="Impressum">
       <div>
         <h2>Moritz Hipper</h2>
         <p>Augustenstraße 118</p>
@@ -12,6 +13,6 @@ export const Imprint = () => {
         <h2>Kontakt</h2>
         <p>E-Mail: info@moritzhipper.com</p>
       </div>
-    </>
+    </InfoPage>
   )
 }

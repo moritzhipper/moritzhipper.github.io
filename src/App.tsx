@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom"
-import { AboutMe } from "./components/AboutMe"
 import { Footer } from "./components/Footer"
-import { Imprint } from "./components/Imprint"
-import { Privacy } from "./components/Privacy"
-import { Projects } from "./components/Projects"
+import { AboutMePage } from "./components/pages/AboutMePage"
+import { ImprintPage } from "./components/pages/ImprintPage"
+import { PrivacyPage } from "./components/pages/PrivacyPage"
+import { ProjectsPage } from "./components/pages/ProjectsPage"
+import { Welcome } from "./components/pages/WelcomePage"
 import { Scene } from "./components/Scene"
-import { Welcome } from "./components/Welcome"
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
       <main className="foreground">
         <Routes>
           <Route element={<Welcome />} path="/" />
-          <Route element={<Projects />} path="/projects" />
-          <Route element={<AboutMe />} path="/interests" />
-          <Route element={<Imprint />} path="/imprint" />
-          <Route element={<Privacy />} path="/privacy" />
+          <Route element={<ProjectsPage />} path="/projects" />
+          <Route element={<AboutMePage />} path="/interests" />
+          <Route element={<ImprintPage />} path="/imprint" />
+          <Route element={<PrivacyPage />} path="/privacy" />
         </Routes>
       </main>
       <Scene />
