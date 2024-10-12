@@ -46,7 +46,7 @@ export const Scene = () => {
       />
       <div className={"middleground"} style={displacementMiddle}>
         <img onLoad={finishedLoading} className="lamp" src={lamp} alt="" />
-        <img onLoad={finishedLoading} className=" plant" src={plant} alt="" />
+        <img onLoad={finishedLoading} className="plant" src={plant} alt="" />
       </div>
     </div>
   )

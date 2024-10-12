@@ -1,8 +1,8 @@
-import { InfoPage } from "./InfoPage"
+import { InfoPageWrapper } from "./InfoPageWrapper"
 
 export const AboutMePage = () => {
   return (
-    <InfoPage header="About Me">
+    <InfoPageWrapper header="About Me">
       <p className="big">
         I was born in Frankfurt, moved to Stuttgart to study Information
         Technology and have been building my career in Fintech for the past ten
@@ -20,6 +20,6 @@ export const AboutMePage = () => {
       >
         Contact me via Linkedin
       </a>
-    </InfoPage>
+    </InfoPageWrapper>
   )
 }

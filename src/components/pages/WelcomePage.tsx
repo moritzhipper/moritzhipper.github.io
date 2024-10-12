@@ -122,7 +122,7 @@ const getRandomNumber = (min: number, max: number): number =>
 
 const getRandomIntervall = (textList: string[], index: number): number => {
   if (isFirstListItem(textList, index)) {
-    return getRandomNumber(100, 500)
+    return getRandomNumber(100, 400)
   }
   // make it seem like im stopping to think
   if (isFirstLetterOfListItem(textList, index)) {

@@ -1,8 +1,8 @@
-import { InfoPage } from "./InfoPage"
+import { InfoPageWrapper } from "./InfoPageWrapper"
 import "./PrivacyPage.css"
 export const PrivacyPage = () => {
   return (
-    <InfoPage header="Datenschutz&#8203;erklärung">
+    <InfoPageWrapper header="Datenschutz&#8203;erklärung">
       <div className="privacy-wrapper">
         <p>
           Der Hoster dieser Website erhebt in sogenannten Logfiles die folgenden
@@ -124,6 +124,6 @@ export const PrivacyPage = () => {
           anwendbar ist.
         </p>
       </div>
-    </InfoPage>
+    </InfoPageWrapper>
   )
 }

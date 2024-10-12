@@ -3,7 +3,7 @@ import "./Footer.css"
 
 export const Footer = () => {
   return (
-    <footer className="mt-l foreground">
+    <footer className="foreground">
       <Link to="/imprint" className="page">
         Imprint
       </Link>

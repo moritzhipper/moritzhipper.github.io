@@ -1,4 +1,4 @@
-import { InfoPage } from "./InfoPage"
+import { InfoPageWrapper } from "./InfoPageWrapper"
 import "./ProjectsPage.css"
 
 export const ProjectsPage = () => {
@@ -23,13 +23,13 @@ export const ProjectsPage = () => {
     },
   ]
   return (
-    <InfoPage header="Some Projects">
+    <InfoPageWrapper header="Some Projects">
       <div className="project-wrapper grid">
         {projects.map((project, i) => (
           <Project key={i} {...project} />
         ))}
       </div>
-    </InfoPage>
+    </InfoPageWrapper>
   )
 }
 

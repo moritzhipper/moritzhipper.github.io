@@ -3,7 +3,9 @@
 .foreground,
 .middleground,
 .background {
-  transition: opacity 0.6s ease-in-out;
+  transition-property: opacity;
+  transition-duration: var(--animation-duration-s);
+  transition-timing-function: ease-in-out;
   opacity: 0;
 }
 
@@ -19,7 +21,7 @@
   .foreground,
   .middleground,
   .background {
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition-property: opacity, transform;
     transition-behavior: allow-discrete;
   }
 }

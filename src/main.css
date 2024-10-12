@@ -25,9 +25,12 @@ p,
 a {
   margin: 0;
 }
-
 body {
   background-color: var(--accent-3);
+  transition: color 0.3s, background-color 0.3s, filter 0.3s;
+}
+
+#root {
   height: 100dvh;
   display: flex;
   flex-direction: column;

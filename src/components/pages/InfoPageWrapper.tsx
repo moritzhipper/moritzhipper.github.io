@@ -1,13 +1,13 @@
 import { ReactNode } from "react"
 import { Link } from "react-router-dom"
-import "./InfoPage.css"
+import "./InfoPageWrapper.css"
 
 type Props = {
   header: string
   children: ReactNode
 }
 
-export const InfoPage = ({ header, children }: Props) => {
+export const InfoPageWrapper = ({ header, children }: Props) => {
   return (
     <div className="info-page-wrapper animate-fly-in">
       <div className="header">
