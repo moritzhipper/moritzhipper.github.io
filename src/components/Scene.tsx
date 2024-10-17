@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import background from "../assets/images/background.png"
+import doggo from "../assets/images/doggo.png"
 import lamp from "../assets/images/lamp.png"
 import plant from "../assets/images/plant.png"
 import { initiatorState } from "../initiator-state"
@@ -14,17 +15,21 @@ export const Scene = () => {
   const displacementBackground = {
     transform: `translate(${acceleration.x * 40}px, ${acceleration.y * 8}px)`,
   }
-  const displacementMiddle = {
-    transform: `translate(${acceleration.x * 30}px, ${acceleration.y * 6}px)`,
+  const displacementMiddleground = {
+    transform: `translate(${acceleration.x * 35}px, ${acceleration.y * 6}px)`,
+  }
+
+  const displacementForeground = {
+    transform: `translate(${acceleration.x * 20}px, ${acceleration.y * 6}px)`,
   }
 
   useEffect(() => {
-    if (loadedImagesCount !== 3) return
+    if (loadedImagesCount !== 4) return
 
     // short timeout to wait for image to be rendered, so it doesnt just 'pop in'
     const imagesLoadedTimeout = setTimeout(() => {
       setImagesLoadingFinished()
-    }, 400)
+    }, 700)
 
     return () => {
       clearTimeout(imagesLoadedTimeout)
@@ -37,14 +42,13 @@ export const Scene = () => {
 
   return (
     <div className="scene-wrapper">
-      <img
-        onLoad={finishedLoading}
-        className={"background"}
-        src={background}
-        style={displacementBackground}
-        alt=""
-      />
-      <div className={"middleground"} style={displacementMiddle}>
+      <div className="background" style={displacementBackground}>
+        <img onLoad={finishedLoading} src={background} alt="" />
+      </div>
+      <div className="middleground" style={displacementMiddleground}>
+        <img onLoad={finishedLoading} className="doggo" src={doggo} alt="" />
+      </div>
+      <div className="foreground" style={displacementForeground}>
         <img onLoad={finishedLoading} className="lamp" src={lamp} alt="" />
         <img onLoad={finishedLoading} className="plant" src={plant} alt="" />
       </div>

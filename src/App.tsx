@@ -10,7 +10,7 @@ import { Scene } from "./components/Scene"
 function App() {
   return (
     <>
-      <main className="foreground">
+      <main>
         <Routes>
           <Route element={<Welcome />} path="/" />
           <Route element={<ProjectsPage />} path="/projects" />

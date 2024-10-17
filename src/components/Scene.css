@@ -1,3 +1,5 @@
+@import "./../style/viewports";
+
 .scene-wrapper {
   position: fixed;
   height: 100vh;
@@ -9,24 +11,44 @@
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.3;
 
   img {
     pointer-events: none;
-    position: absolute;
-    object-fit: contain;
-    object-position: center;
   }
 
-  img.background {
-    align-self: center;
-    height: 105%;
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 110%;
+    }
+  }
+
+  .middleground,
+  .foreground {
+    width: var(--width-max);
+    position: absolute;
+    max-width: 100vw;
+    height: 100vh;
+    img {
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+    }
   }
 
   .middleground {
+    img.doggo {
+      aspect-ratio: 1;
+      height: 40vh;
+      right: -30vh;
+      bottom: -10px;
+    }
+  }
+
+  .foreground {
     filter: blur(3px);
-    width: var(--width-max);
-    position: relative;
 
     img.lamp {
       aspect-ratio: 1;
@@ -41,5 +63,14 @@
       left: -30vh;
       bottom: -5vh;
     }
+  }
+}
+
+@media (--viewport-s) {
+  .foreground,
+  .middleground,
+  .background {
+    transition: transform 0.3s ease-out;
+    transition-behavior: allow-discrete;
   }
 }
