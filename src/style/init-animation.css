@@ -17,4 +17,20 @@ footer {
   footer {
     opacity: 1;
   }
+  .loading-spinner-wrapper {
+    animation: disappear var(--animation-duration-s);
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
 }

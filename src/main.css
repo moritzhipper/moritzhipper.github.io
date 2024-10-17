@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "BodyFont";
-  src: url(./assets/fonts/Rubik-VariableFont_wght.ttf) format("truetype");
+  src: url(./assets/fonts/Nunito-VariableFont_wght.ttf) format("truetype");
 }
 
 :root {
@@ -48,15 +48,12 @@ body {
   }
 }
 
-h1,
-h2 {
-  font-family: HeaderFont;
-}
-
 h1 {
+  font-family: HeaderFont;
   font-size: var(--font-size-2xl);
   line-height: 1.3em;
   margin: var(--distance-m) 0;
+  font-weight: 900;
 
   &.big {
     font-size: var(--font-size-3xl);
@@ -65,10 +62,11 @@ h1 {
 
 h2 {
   font-size: var(--font-size-xl);
+  font-weight: 800;
 }
 
 a {
-  font-weight: 500;
+  font-weight: 800;
   color: var(--accent-1);
   text-decoration: none;
 
@@ -91,7 +89,7 @@ a {
       transition: width 0.2s;
       height: 2px;
       background-color: var(--accent-1);
-      border-radius: 2px;
+      border-radius: 3px;
       content: "";
       display: block;
       width: 0px;
@@ -110,8 +108,10 @@ a {
 p {
   font-size: var(--font-size-m);
   line-height: 1.3em;
+  font-weight: 600;
 
   &.big {
+    line-height: 1.4em;
     font-size: var(--font-size-xl);
   }
 }

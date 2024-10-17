@@ -38,7 +38,7 @@ main {
 
 @media (--viewport-m) {
   main {
-    padding: var(--distance-xl);
+    padding: var(--distance-xl) var(--distance-xl) 0 var(--distance-xl);
     justify-content: center;
   }
   .grid {

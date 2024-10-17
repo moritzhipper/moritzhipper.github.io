@@ -19,7 +19,7 @@
       font-size: var(--font-size-xs);
       transition: opacity var(--animation-duration-m);
       font-size: var(--font-size-xl);
-      font-weight: bold;
+      font-weight: 800;
 
       &:hover {
         opacity: 1;
@@ -33,6 +33,7 @@
         left: -32px;
       }
     }
+
     @media (--viewport-s) {
       display: grid;
       width: 100%;

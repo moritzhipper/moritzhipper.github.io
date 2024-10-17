@@ -6,10 +6,12 @@ import { PrivacyPage } from "./components/pages/PrivacyPage"
 import { ProjectsPage } from "./components/pages/ProjectsPage"
 import { Welcome } from "./components/pages/WelcomePage"
 import { Scene } from "./components/Scene"
+import { Spinner } from "./components/Spinner"
 
 function App() {
   return (
     <>
+      <Spinner />
       <main>
         <Routes>
           <Route element={<Welcome />} path="/" />
