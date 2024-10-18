@@ -71,6 +71,5 @@
   .middleground,
   .background {
     transition: transform 0.3s ease-out;
-    transition-behavior: allow-discrete;
   }
 }
