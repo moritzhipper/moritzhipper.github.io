@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react"
+import path from "path"
 import postCssCustomMedia from "postcss-custom-media"
 import { defineConfig } from "vite"
 
@@ -8,6 +9,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [postCssCustomMedia],
+    },
+  },
+  base: "/moritzhipper",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 })
