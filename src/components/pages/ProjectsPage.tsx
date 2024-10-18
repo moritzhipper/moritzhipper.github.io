@@ -10,9 +10,15 @@ export const ProjectsPage = () => {
       tags: ["React", "Vite"],
     },
     {
+      name: "ESY Homepage",
+      description: "Homepage and blog of a Stuttgart based band",
+      link: "https://github.com/moritzhipper/esy-crew",
+      tags: ["Eleventy"],
+    },
+    {
       name: "Buddy",
       description: "Helps you finding a therapist",
-      link: "https://github.com/moritzhipper/",
+      link: "https://github.com/moritzhipper/buddy",
       tags: ["Angular", "Postgres", "NX", "express.js"],
     },
     {
