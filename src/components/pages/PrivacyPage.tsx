@@ -4,6 +4,8 @@ export const PrivacyPage = () => {
   return (
     <InfoPageWrapper header="Datenschutz&#8203;erklärung">
       <div className="privacy-wrapper">
+        <p>This section is german because it is required by german law.</p>
+        <hr />
         <p>
           Der Hoster dieser Website erhebt in sogenannten Logfiles die folgenden
           Daten, die Ihr Browser übermittelt:

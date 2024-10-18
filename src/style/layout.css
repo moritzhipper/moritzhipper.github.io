@@ -37,6 +37,10 @@ main {
 }
 
 @media (--viewport-m) {
+  hr {
+    width: 50%;
+    margin-right: 50%;
+  }
   main {
     padding: var(--distance-xl) var(--distance-xl) 0 var(--distance-xl);
     justify-content: center;
@@ -51,6 +55,10 @@ main {
 }
 
 @media (--viewport-s) {
+  hr {
+    width: 100%;
+  }
+
   main {
     padding: 0 var(--distance-m);
   }

@@ -6,7 +6,7 @@ export const ProjectsPage = () => {
     {
       name: "This Website",
       description: "You're looking at it. Check out out the code!",
-      link: "https://moritzhipper.com",
+      link: "https://github.com/moritzhipper/moritzhipper.github.io",
       tags: ["React", "Vite"],
     },
     {
@@ -18,7 +18,7 @@ export const ProjectsPage = () => {
     {
       name: "Keinerdeinerfreunde",
       description: "Makes people feel heard",
-      link: "https://keinerdeinerfreunde.de",
+      link: "https://github.com/moritzhipper/",
       tags: ["React", "three.js", "fiber"],
     },
   ]
@@ -41,11 +41,15 @@ type ProjectProps = {
 }
 
 const Project = ({ name, description, link, tags }: ProjectProps) => {
+  const removeHttps = (url: string): string => {
+    return url.replace(/^https:\/\//, "")
+  }
+
   return (
-    <a href="{link}" className="project">
+    <a href={link} className="project">
       <h2>{name}</h2>
       <p>{description}</p>
-      <p className="url">{link}</p>
+      <p className="url">{removeHttps(link)}</p>
       <div className="tag-wrapper">
         {tags.map((tag, i) => (
           <div className="tag" key={i}>

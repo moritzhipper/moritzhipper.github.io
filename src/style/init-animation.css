@@ -1,11 +1,11 @@
 .scene-wrapper,
 main {
-  transition: opacity var(--animation-duration-l) ease-in-out;
+  transition: opacity var(--animation-duration-l) ease-out;
   opacity: 0.001;
 }
 
 footer {
-  transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-out;
   transition-delay: var(--animation-duration-l);
   opacity: 0;
 }
@@ -20,7 +20,7 @@ footer {
     opacity: 1;
   }
   .loading-spinner-wrapper {
-    animation: disappear var(--animation-duration-s);
+    animation: disappear var(--animation-duration-m);
     animation-fill-mode: forwards;
   }
 }
