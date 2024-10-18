@@ -11,7 +11,6 @@ export default defineConfig({
       plugins: [postCssCustomMedia],
     },
   },
-  base: "/moritzhipper",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
