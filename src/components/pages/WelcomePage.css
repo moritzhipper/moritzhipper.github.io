@@ -1,16 +1,23 @@
-@import "./../viewports";
+.typewriter-is-animating {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 
-.links-wrapper {
-  display: flex;
-  align-items: flex-start;
+  &::before {
+    display: block;
+    content: "click to skip this amazing animation";
+    position: absolute;
+    font-weight: bold;
+    white-space: nowrap;
 
-  @media (--viewport-m) {
-    gap: var(--distance-l);
-    flex-direction: row;
+    transition: opacity var(--animation-duration-m),
+      top var(--animation-duration-m);
+    top: -4px;
+    opacity: 0;
   }
 
-  @media (--viewport-s) {
-    gap: var(--distance-l);
-    flex-direction: column;
+  &:hover::before {
+    top: -8px;
+    opacity: 0.4;
   }
 }

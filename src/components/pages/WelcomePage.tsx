@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { initiatorState } from "../../initiator-state"
+import "./WelcomePage.css"
 
-const textArray: string[] = [
+const pageTextContent: string[] = [
   "Hello there!",
   "My name is Moritz and I love to code.",
   "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies. I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
@@ -19,14 +20,18 @@ export const Welcome = () => {
     setTypewriterAnimationFinished,
   } = initiatorState()
 
-  const texts = useMemo(() => textArray, [])
-  const textLength = useMemo(() => texts.join("").length, [])
+  const textContent = useMemo(() => pageTextContent, [])
+  const textLength = useMemo(() => textContent.join("").length, [])
+
+  const animationFinishedClassName = typewriterAnimationFinished
+    ? ""
+    : "typewriter-is-animating"
 
   useEffect(() => {
     if (!imagesLoadingFinished) return
 
     if (typewriterAnimationFinished) {
-      setWrittenText(texts)
+      setWrittenText(textContent)
       return
     }
 
@@ -36,9 +41,9 @@ export const Welcome = () => {
     }
 
     const timeout = setTimeout(() => {
-      setWrittenText(getTextArrayUntilIndex(texts, index))
+      setWrittenText(getTextArrayUntilIndex(textContent, index))
       setIndex((prev) => prev + 1)
-    }, getRandomIntervall(texts, index))
+    }, getRandomIntervall(textContent, index))
 
     return () => {
       clearTimeout(timeout)
@@ -46,7 +51,10 @@ export const Welcome = () => {
   }, [index, typewriterAnimationFinished, writtenText, imagesLoadingFinished])
 
   return (
-    <div className="animate-fly-in">
+    <div
+      className={"animate-fly-in " + animationFinishedClassName}
+      onClick={setTypewriterAnimationFinished}
+    >
       {writtenText[0] && <h1 className="big">{writtenText[0]}</h1>}
       {writtenText[1] && <p className="big">{writtenText[1]}</p>}
       {writtenText[2] && <p className="big mt-m">{writtenText[2]}</p>}
@@ -93,10 +101,15 @@ const getTextArrayUntilIndex = (
   return result
 }
 
-// Emulate user pauses
+const getRandomNumber = (min: number, max: number): number =>
+  Math.floor(Math.random() * (max - min + 1)) + min
+
+// emulate user pauses
 const isLongIntervall = (): boolean => {
   return getRandomNumber(0, 100) > 99
 }
+
+// make it seem like im thinking aboout the next sentence
 const isFirstLetterOfListItem = (
   textList: string[],
   index: number
@@ -113,13 +126,12 @@ const isFirstLetterOfListItem = (
   return false
 }
 
+// make first typing of first line slower to build tension
 const isFirstListItem = (textList: string[], index: number): boolean => {
   return textList[0].length >= index
 }
 
-const getRandomNumber = (min: number, max: number): number =>
-  Math.floor(Math.random() * (max - min + 1)) + min
-
+// generate seemingly natural intervalls between keypresses
 const getRandomIntervall = (textList: string[], index: number): number => {
   if (isFirstListItem(textList, index)) {
     return getRandomNumber(100, 400)
