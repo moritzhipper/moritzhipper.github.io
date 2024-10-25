@@ -47,7 +47,6 @@
 
     .images {
       position: relative;
-      position-self: center;
       img {
         height: auto;
         box-sizing: border-box;

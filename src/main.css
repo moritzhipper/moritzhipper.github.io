@@ -57,6 +57,7 @@ h1 {
 
   &.big {
     font-size: var(--font-size-3xl);
+    margin: var(--distance-l) var(--distance-xl) var(--distance-l) 0;
   }
 }
 
@@ -117,7 +118,6 @@ p {
 }
 
 hr {
-
   margin: var(--distance-s) 0;
   border: none;
   border-bottom: 1px solid var(--accent-2);
