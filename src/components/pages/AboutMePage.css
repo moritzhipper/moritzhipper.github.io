@@ -48,7 +48,6 @@
     .images {
       position: relative;
       img {
-        height: auto;
         box-sizing: border-box;
         border: 4px solid var(--accent-2);
         border-radius: var(--radius-s);

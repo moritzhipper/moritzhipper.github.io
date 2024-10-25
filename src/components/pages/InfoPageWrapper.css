@@ -38,15 +38,8 @@
   }
 }
 
-.info-page-wrapper {
-  @media (--viewport-s) {
-    h1 {
-      margin: var(--distance-m) 0;
-    }
-  }
-  @media (--viewport-m) {
-    h1 {
-      margin-bottom: var(--distance-m);
-    }
+@media (--viewport-s) {
+  .info-page-wrapper h1 {
+    margin: var(--distance-m) 0;
   }
 }

@@ -57,7 +57,6 @@ h1 {
 
   &.big {
     font-size: var(--font-size-3xl);
-    margin: var(--distance-l) var(--distance-xl) var(--distance-l) 0;
   }
 }
 

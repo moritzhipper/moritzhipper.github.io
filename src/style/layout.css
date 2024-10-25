@@ -37,6 +37,9 @@ main {
 }
 
 @media (--viewport-m) {
+  h1.big {
+    margin-bottom: var(--distance-l);
+  }
   hr {
     width: 50%;
     margin-right: 50%;
@@ -55,6 +58,9 @@ main {
 }
 
 @media (--viewport-s) {
+  h1.big {
+    margin: var(--distance-l) var(--distance-xl) var(--distance-l) 0;
+  }
   hr {
     width: 100%;
   }

@@ -29,7 +29,7 @@ export const Scene = () => {
     // short timeout to wait for image to be rendered, so it doesnt just 'pop in'
     const imagesLoadedTimeout = setTimeout(() => {
       setImagesLoadingFinished()
-    }, 700)
+    }, 100)
 
     return () => {
       clearTimeout(imagesLoadedTimeout)
