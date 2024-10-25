@@ -3,6 +3,7 @@ import { InfoPageWrapper } from "./InfoPageWrapper"
 export const AboutMePage = () => {
   return (
     <InfoPageWrapper header="About Me">
+      <img src="" alt="" />
       <p className="big">
         I was born in Frankfurt, moved to Stuttgart to study Information
         Technology and have been building my career in Fintech for the past ten
