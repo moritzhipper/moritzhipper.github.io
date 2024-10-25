@@ -47,10 +47,6 @@ type ProjectProps = {
 }
 
 const Project = ({ name, description, link, tags }: ProjectProps) => {
-  const removeHttps = (url: string): string => {
-    return url.replace(/^https:\/\//, "")
-  }
-
   return (
     <a href={link} className="project">
       <h2>{name}</h2>
