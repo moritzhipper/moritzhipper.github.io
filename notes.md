@@ -4,4 +4,4 @@
 
 cwebp input.jpg -o output.jpg
 mogrify -auto-orient input.webp
-mogrify -strip input.webp 
+mogrify -strip input.webp

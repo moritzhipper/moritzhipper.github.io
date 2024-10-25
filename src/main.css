@@ -52,11 +52,12 @@ h1 {
   font-family: HeaderFont;
   font-size: var(--font-size-2xl);
   line-height: 1.3em;
-  margin: var(--distance-m) 0;
+  margin: 0;
   font-weight: 900;
 
   &.big {
     font-size: var(--font-size-3xl);
+    margin: var(--distance-l) var(--distance-xl) var(--distance-l) 0;
   }
 }
 
@@ -117,7 +118,6 @@ p {
 }
 
 hr {
-
   margin: var(--distance-s) 0;
   border: none;
   border-bottom: 1px solid var(--accent-2);

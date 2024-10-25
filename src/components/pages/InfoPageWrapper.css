@@ -11,10 +11,6 @@
     margin: var(--distance-m) 0;
     position: relative;
 
-    h1 {
-      margin: 0;
-    }
-
     a {
       font-size: var(--font-size-xs);
       transition: opacity var(--animation-duration-m);
@@ -38,9 +34,19 @@
       display: grid;
       width: 100%;
       grid-template-columns: 1fr auto;
-      a {
-        align-self: grid-start;
-      }
+    }
+  }
+}
+
+.info-page-wrapper {
+  @media (--viewport-s) {
+    h1 {
+      margin: var(--distance-m) 0;
+    }
+  }
+  @media (--viewport-m) {
+    h1 {
+      margin-bottom: var(--distance-m);
     }
   }
 }

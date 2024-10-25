@@ -55,7 +55,7 @@ const Project = ({ name, description, link, tags }: ProjectProps) => {
     <a href={link} className="project">
       <h2>{name}</h2>
       <p>{description}</p>
-      <p className="url">{removeHttps(link)}</p>
+      {/* <p className="url">{removeHttps(link)}</p> */}
       <div className="tag-wrapper">
         {tags.map((tag, i) => (
           <div className="tag" key={i}>
