@@ -40,7 +40,7 @@
     --accent-2: var(--base-1);
     --accent-3: var(--base-0);
 
-    img {
+    .scene-wrapper img {
       filter: brightness(0.5);
     }
   }

@@ -1,3 +1,5 @@
+@import "./../style/viewports";
+
 footer {
   display: flex;
   justify-content: flex-end;
@@ -5,4 +7,12 @@ footer {
   position: sticky;
   bottom: 0;
   padding: var(--distance-m);
+
+  @media (--viewport-s) {
+    a {
+      background-color: var(--accent-2);
+      padding: var(--distance-2xs) var(--distance-s);
+      border-radius: var(--radius-m);
+    }
+  }
 }
