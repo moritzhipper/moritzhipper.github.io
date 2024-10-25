@@ -10,14 +10,14 @@
     font-weight: bold;
     white-space: nowrap;
 
-    transition: opacity var(--animation-duration-m),
-      top var(--animation-duration-m);
+    transition: opacity var(--animation-duration-s),
+      top var(--animation-duration-s);
     top: -4px;
     opacity: 0;
   }
 
   &:hover::before {
-    top: -8px;
+    top: -24px;
     opacity: 0.4;
   }
 }

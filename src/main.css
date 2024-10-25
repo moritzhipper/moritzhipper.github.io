@@ -122,7 +122,6 @@ hr {
   border-bottom: 1px solid var(--accent-2);
 }
 
-// shared classes
 .pills {
   border-radius: var(--radius-m);
   padding: var(--distance-2xs) var(--distance-s);
