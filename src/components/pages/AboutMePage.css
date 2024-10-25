@@ -26,7 +26,7 @@
     @media (--viewport-s) {
       grid-template-columns: 1fr;
       .images {
-        margin: 0 var(--distance-l);
+        margin: var(--distance-s) var(--distance-l) var(--distance-l);
         box-sizing: content-box;
 
         .me {
