@@ -11,7 +11,7 @@ export const ImprintPage = () => {
       </div>
       <div className="mt-m">
         <h2>Kontakt</h2>
-        <p>E-Mail: moritz.hipper@protonmail.com</p>
+        <p>E-Mail: moritz.hipper@proton.me</p>
       </div>
     </InfoPageWrapper>
   )
