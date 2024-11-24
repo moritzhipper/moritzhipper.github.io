@@ -133,6 +133,11 @@ const isFirstListItem = (textList: string[], index: number): boolean => {
 
 // generate seemingly natural intervalls between keypresses
 const getRandomIntervall = (textList: string[], index: number): number => {
+  // Let user check out the scene first
+  // Manually stretching time till page is rendered is bad seo, but art does has no limitiations
+  if (index === 0) return 1500
+  if (index === 1) return 1000
+
   if (isFirstListItem(textList, index)) {
     return getRandomNumber(100, 400)
   }

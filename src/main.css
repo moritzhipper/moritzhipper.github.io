@@ -108,6 +108,7 @@ a {
 p {
   font-size: var(--font-size-l);
   line-height: 1.7em;
+  opacity: 0.8;
 
   &.big {
     line-height: 1.4em;
