@@ -71,7 +71,7 @@ a {
   text-decoration: none;
 
   &.page {
-    opacity: 0.6;
+    opacity: 0.5;
     transition: opacity var(--animation-duration-m);
 
     &:hover,
@@ -106,9 +106,8 @@ a {
 }
 
 p {
-  font-size: var(--font-size-m);
-  line-height: 1.3em;
-  font-weight: 600;
+  font-size: var(--font-size-l);
+  line-height: 1.7em;
 
   &.big {
     line-height: 1.4em;

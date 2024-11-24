@@ -20,16 +20,16 @@ export const AboutMePage = () => {
           />
         </div>
         <div className="text">
-          <p className="big">
-            I was born in Frankfurt, moved to Stuttgart to study Information
-            Technology and have been building my career in Fintech for the past
-            ten years. I'm good in coding, connecting with others and sharing my
-            knowledge with students and colleagues. I really enjoy bringing my
-            creativity into my work.
+          <p>
+            I grew up in Frankfurt am Main, moved to Stuttgart to study
+            Information Technology and have been building my career in Fintech
+            for the past ten years. I'm good in coding, connecting with others
+            and sharing my knowledge with students and colleagues. I really
+            enjoy bringing my creativity into my work.
           </p>
-          <p className="big mt-s">
-            When I'm not coding, I'm probably in the nature somewhere looking at
-            birds.
+          <p className="mt-s">
+            When I'm not coding, trying out new and interesitng things, I'm
+            probably in nature somewhere looking at birds.
           </p>
           <a
             className="big mt-l"

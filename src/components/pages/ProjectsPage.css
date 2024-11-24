@@ -15,6 +15,8 @@
       display: flex;
       margin-top: var(--distance-s);
       gap: var(--distance-s);
+      align-items: end;
+      flex-wrap: wrap;
 
       .tag {
         border-radius: var(--radius-m);

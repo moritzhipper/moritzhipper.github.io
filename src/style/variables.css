@@ -4,10 +4,10 @@
   --base-2: #efc6a0;
   --base-3: #efe5cc;
 
-  --accent-0: var(--base-0);
-  --accent-1: var(--base-1);
-  --accent-2: var(--base-2);
-  --accent-3: var(--base-3);
+  --accent-0: var(--base-3);
+  --accent-1: var(--base-2);
+  --accent-2: var(--base-1);
+  --accent-3: var(--base-0);
 
   --distance-2xs: 2px;
   --distance-xs: 4px;
@@ -31,17 +31,4 @@
   --animation-duration-l: 0.6s;
 
   --width-max: 1280px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-0: var(--base-3);
-    --accent-1: var(--base-2);
-    --accent-2: var(--base-1);
-    --accent-3: var(--base-0);
-
-    .scene-wrapper img {
-      filter: brightness(0.5);
-    }
-  }
 }
