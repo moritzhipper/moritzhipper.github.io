@@ -16,6 +16,7 @@
       transition: opacity var(--animation-duration-m);
       font-size: var(--font-size-xl);
       font-weight: 800;
+      opacity: 0.5;
 
       &:hover {
         opacity: 1;

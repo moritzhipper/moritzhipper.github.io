@@ -28,7 +28,7 @@ export const AboutMePage = () => {
             enjoy bringing my creativity into my work.
           </p>
           <p className="mt-s">
-            When I'm not coding, trying out new and interesitng things, I'm
+            When I'm not coding, trying out new and interesting things, I'm
             probably in nature somewhere looking at birds.
           </p>
           <a
