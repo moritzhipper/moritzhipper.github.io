@@ -21,16 +21,22 @@ export const AboutMePage = () => {
         </div>
         <div className="text">
           <p>
-            I grew up in Frankfurt am Main, moved to Stuttgart to study
-            Information Technology and have been building my career in Fintech
-            for the past ten years. I'm good in coding, connecting with others
-            and sharing my knowledge with students and colleagues. I really
-            enjoy bringing my creativity into my work.
+            I grew up in Frankfurt am Main, later moving to Stuttgart to pursue
+            a degree in Information Technology. Over the past decade, I’ve built
+            a thriving career in Fintech, blending technical expertise with a
+            passion for innovation. I excel at coding, fostering meaningful
+            connections, and sharing my knowledge with both students and
+            colleagues. Infusing creativity into my work is what drives me.
           </p>
           <p className="mt-s">
-            When I'm not coding, trying out new and interesting things, I'm
-            probably in nature somewhere looking at birds.
+            When I’m not deep in code or exploring new ideas, you’ll likely find
+            me outdoors, immersed in nature and birdwatching.
           </p>
+          <p className="mt-m">
+            Interested in starting a conversation or exploring my projects?
+            Let’s connect!
+          </p>
+
           <a
             className="big mt-l"
             href="https://www.linkedin.com/in/moritz-hipper-226226323/"

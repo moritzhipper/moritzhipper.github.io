@@ -7,8 +7,8 @@ const pageTextContent: string[] = [
   "Hello there!",
   "My name is Moritz and I love to code.",
   "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies. I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
-  "Check out some of my code",
   "Read more about me",
+  "Check out some my projects",
 ]
 
 export const Welcome = () => {
@@ -60,11 +60,11 @@ export const Welcome = () => {
       {writtenText[2] && <p className="big mt-m">{writtenText[2]}</p>}
       {writtenText[3] && (
         <div className="flex-row mt-l">
-          <Link className="big" to="/projects">
+          <Link className="big" to="/interests">
             {writtenText[3]}
           </Link>
           {writtenText[4] && (
-            <Link className="big" to="/interests">
+            <Link className="big" to="/projects">
               {writtenText[4]}
             </Link>
           )}
