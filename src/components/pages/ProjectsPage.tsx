@@ -24,7 +24,7 @@ export const ProjectsPage = () => {
       tags: ["React", "three.js", "react-spring"],
     },
     {
-      name: "Band Website",
+      name: "Esy Music",
       description:
         "A Band website featuring releases and tour updates with CD via Github Actions",
       link: "https://github.com/moritzhipper/esy-crew",
