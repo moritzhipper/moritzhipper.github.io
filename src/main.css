@@ -27,6 +27,7 @@ a {
 }
 
 body {
+  font-synthesis: none;
   background-color: var(--accent-3);
   transition: color 0.3s, background-color 0.3s, filter 0.3s;
   color: var(--accent-0);
