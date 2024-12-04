@@ -8,7 +8,7 @@ const pageTextContent: string[] = [
   "My name is Moritz and I love to code.",
   "I know about Angular, React, Express.js, Spring, PostgreSQL, modern AI APIs and the surrounding technologies. I’ve also got solid experience with Docker, Kubernetes and software architecture, making sure projects are built on a strong and scalable foundation.",
   "Read more about me",
-  "Check out some my projects",
+  "Check out some projects",
 ]
 
 export const Welcome = () => {
