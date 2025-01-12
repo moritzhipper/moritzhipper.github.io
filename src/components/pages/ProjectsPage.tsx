@@ -17,10 +17,10 @@ export const ProjectsPage = () => {
       tags: ["Angular", "Postgres", "Express", "NgRx", "Nx Monorepo"],
     },
     {
-      name: "Angry Ducko",
+      name: "batakali",
       description:
         "Creative website keeping users interested using interactive WebGL 3D Graphics",
-      link: "https://github.com/moritzhipper/angry-ducko",
+      link: "https://batakali.com",
       tags: ["React", "three.js", "react-spring"],
     },
     {
