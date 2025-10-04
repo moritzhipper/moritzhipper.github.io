@@ -5,9 +5,9 @@ export const ImprintPage = () => {
     <InfoPageWrapper header="Impressum">
       <div>
         <h2>Moritz Hipper</h2>
-        <p>Augustenstraße 118</p>
-        <p>70197, Stuttgart</p>
-        <p>Germany</p>
+        <p>Vaartkade 55</p>
+        <p>2171 HT, South Holland</p>
+        <p>Netherlands</p>
       </div>
       <div className="mt-m">
         <h2>Kontakt</h2>
